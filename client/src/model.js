@@ -165,5 +165,5 @@ export function aggregate(aggregateSpec) {
 }
 
 export function model(constructor) {
-  return (...args) => aggregate(constructor(...args))
+  return (...args) => aggregate(new constructor(...args))
 }
